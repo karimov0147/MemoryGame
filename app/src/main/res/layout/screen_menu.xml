@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img"
+        tools:layout_editor_absoluteX="-118dp"
+        tools:layout_editor_absoluteY="144dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:rotationX="90"
+        android:fontFamily="@font/kalam"
+        android:shadowColor="#685F10"
+        android:shadowDx="20"
+        android:shadowDy="10"
+        android:shadowRadius="15"
+        android:text="Memorization"
+        android:id="@+id/textView"
+        android:textColor="@color/white"
+        android:textSize="45dp"
+        app:layout_constraintBottom_toTopOf="@+id/easy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <studio.karo.neonbutton.NeonButton
+        android:id="@+id/easy"
+        android:layout_width="175dp"
+        android:layout_height="70dp"
+        android:fontFamily="@font/pp_regular"
+        android:text="Find Similar"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:nb_neon_color="#FFE500"
+        app:nb_neon_filled="true"
+        app:nb_neon_icon_padding="15dp"
+        app:nb_neon_radius="15dp"
+        app:nb_neon_width="5dp" />
+
+
+
+    <studio.karo.neonbutton.NeonButton
+        android:id="@+id/medium"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:text="Memorize cards"
+        android:fontFamily="@font/pp_regular"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:textAllCaps="false"
+        app:nb_neon_color="#E8FF00"
+        app:nb_neon_filled="true"
+        app:nb_neon_icon_padding="15dp"
+        app:nb_neon_radius="15dp"
+        app:nb_neon_width="5dp"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/hard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/easy" />
+
+    <studio.karo.neonbutton.NeonButton
+        android:id="@+id/hard"
+        android:layout_width="230dp"
+        android:layout_height="70dp"
+        android:text="Remember queue"
+        android:fontFamily="@font/pp_regular"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:textAllCaps="false"
+        app:nb_neon_color="#00B0FF"
+        app:nb_neon_filled="true"
+        app:nb_neon_icon_padding="15dp"
+        app:nb_neon_radius="15dp"
+        app:nb_neon_width="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medium" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

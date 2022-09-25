@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/item_easy_bg"
+    android:layout_margin="6dp"
+    android:elevation="10dp"
+    android:layout_height="100dp">
+
+    <TextView
+        android:id="@+id/iconView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/item_stroke"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:fontFamily="casual"
+        android:textSize="37dp"
+        android:layout_margin="12dp"/>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

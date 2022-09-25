@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        tools:layout="@layout/screen_easy_game"
+        android:id="@+id/easyGameScreen"
+        android:name="com.example.memorygame.ui.screens.EasyGameScreen"
+        android:label="EasyGameScreen" >
+        <action
+            android:id="@+id/action_easyGameScreen_self"
+            app:destination="@id/easyGameScreen"
+            app:popUpTo="@id/easyGameScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuScreen"
+        android:name="com.example.memorygame.ui.screens.MenuScreen"
+        tools:layout="@layout/screen_menu"
+        android:label="MenuScreen" >
+        <action
+            android:id="@+id/action_menuScreen_to_easyGameScreen"
+            app:destination="@id/easyGameScreen" />
+        <action
+            android:id="@+id/action_menuScreen_to_normalGameScreen"
+            app:destination="@id/normalGameScreen" />
+        <action
+            android:id="@+id/action_menuScreen_to_hardGameScreen"
+            app:destination="@id/hardGameScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/normalGameScreen"
+        android:name="com.example.memorygame.ui.screens.NormalGameScreen"
+        android:label="NormalGameScreen"
+        tools:layout="@layout/screen_normal_game">
+        <action
+            android:id="@+id/action_normalGameScreen_self"
+            app:destination="@id/normalGameScreen"
+            app:popUpTo="@id/normalGameScreen"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="list"
+            app:argType="integer[]" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_hard_game"
+        android:id="@+id/hardGameScreen"
+        android:name="com.example.memorygame.ui.screens.HardGameScreen"
+        android:label="HardGameScreen" >
+        <action
+            android:id="@+id/action_hardGameScreen_self"
+            app:destination="@id/hardGameScreen"
+            app:popUpTo="@id/hardGameScreen"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="list"
+            app:argType="integer[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.example.memorygame.ui.screens.SplashScreen"
+        android:label="SplashScreen"
+        tools:layout="@layout/screen_splash">
+        <action
+            android:id="@+id/action_splashScreen_to_menuScreen"
+            app:destination="@id/menuScreen"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
